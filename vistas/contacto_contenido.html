@@ -1,0 +1,24 @@
+<section id="contacto">
+    <h2>Contacto</h2>
+    <form class="formulario-ajax" id="formulario" method="post" action="contactar">
+        <div>
+            <label for="name">Nombre: </label>
+            <input required="required" id="name" type="text" name="nombre" pattern="[a-zA-Z]+"/>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input required="required" id="email" type="email" name="correo" pattern="[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-z]{2,3}"/>
+        </div>
+        <div>
+            <label for="url">Website: </label>
+            <input id="url" type="url" pattern="http(s)?://[a-zA-Z0-9.]+\.[a-zA-z]{2,3}" name="sitio"/>
+        </div>
+        <div>
+            <label for="comment">Mensaje</label>
+            <textarea id="comment" required name="comentario"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Envíar"/>
+        </div>
+    </form>
+</section>
