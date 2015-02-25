@@ -9,7 +9,21 @@ var sanitizer = require("sanitizer");
 /*app representa la funcionalidad de la aplicacion web*/
 var app = express();
 var servidor = http.createServer(app);
-servidor.listen(8080);
+/*servidor.listen(8080);*/
+
+
+var IP = "127.0.0.1";
+var PORT = 8080;
+
+if(process.env.OPENSHIFT_NODEJS_PORT){
+	PORT = process.env.OPENSHIFT_NODEJS_PORT;
+	IP = process.env.OPENSHIFT_NODEJS_IP;
+}
+
+servidor.listen(PORT,IP);
+
+
+
 
 console.log("servidor levantado");
 
